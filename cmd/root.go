@@ -7,12 +7,12 @@ import (
 	"os"
 
 	"github.com/charmbracelet/log"
-	"github.com/mathis-deconchat/pg-gen-fake/main"
+	"github.com/mathis-deconchat/pg-gen-fake/internal/custom_log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
 
-var Logger = main.Logger
+var Logger = custom_log.Logger
 // rootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
 	Use:   "pg-gen-fake",
