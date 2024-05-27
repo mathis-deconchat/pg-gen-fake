@@ -42,7 +42,6 @@ func init() {
 
 
 func dock(){
-	viper.se
 	composeFilePath := "compose.yml"
 	projectName := "my_project"
 	ctx := context.Background()

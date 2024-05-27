@@ -3,9 +3,10 @@ package cmd
 import (
 	"fmt"
 
+	"os/exec"
+
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"os/exec"
 )
 
 var Hello string

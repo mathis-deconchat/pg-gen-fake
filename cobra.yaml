@@ -1,0 +1,5 @@
+author: Mathis DECONCHAT <postgres>
+useViper: true
+year: 2024
+license:
+  header: This file is part of CLI application foo.

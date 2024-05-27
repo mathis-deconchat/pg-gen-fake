@@ -6,12 +6,13 @@ package cmd
 import (
 	"os"
 
+	"github.com/charmbracelet/log"
+	"github.com/mathis-deconchat/pg-gen-fake/main"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"github.com/charmbracelet/log"
-
 )
 
+var Logger = main.Logger
 // rootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
 	Use:   "pg-gen-fake",
@@ -33,7 +34,6 @@ pg-gen-fake is a tool to generate fake data for an entire database, with integri
 
 	// Run: func(cmd *cobra.Command, args []string) { },
 }
- var Logger *log.Logger
 
 
 
@@ -49,11 +49,7 @@ func Execute() {
 func init() {
 	cobra.OnInitialize(initConfig)
 
-	Logger = log.NewWithOptions(os.Stderr, log.Options{
-		ReportCaller: false,
-		Level: log.InfoLevel,
-		TimeFormat: "15:04:05",
-	})
+
 	
 
 	if viper.GetString("log_level") == "debug" {
