@@ -1,0 +1,11 @@
+check: true
+iteration: 1000
+log_level: INFO
+port: 3232
+postgres:
+    database: postgres
+    host: localhost
+    password: postgres
+    port: 5432
+    user: postgres
+use_docker: "true"
